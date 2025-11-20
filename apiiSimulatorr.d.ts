@@ -3,8 +3,8 @@ export declare const fetchProductCatalog: () => Promise<{
     name: string;
     price: number;
 }[]>;
-export declare const fetchProductReviews: () => Promise<{
-    productId: number;
+export declare const fetchProductReviews: (productId: any) => Promise<{
+    id: number;
     name: string;
     price: number;
     review: string;

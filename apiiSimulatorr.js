@@ -13,13 +13,13 @@ export const fetchProductCatalog = () => {
         }, 1000);
     });
 };
-export const fetchProductReviews = () => {
+export const fetchProductReviews = (productId) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (Math.random() < 0.8) {
                 resolve([
-                    { productId: 1, name: "Laptop", price: 1200, review: "I liked this product" },
-                    { productId: 2, name: "Headphones", price: 200, review: "I hate this product" },
+                    { id: 1, name: "Laptop", price: 1200, review: "I liked this product" },
+                    { id: 2, name: "Headphones", price: 200, review: "I hate this product" },
                 ]);
             }
             else {
