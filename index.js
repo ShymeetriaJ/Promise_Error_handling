@@ -19,5 +19,9 @@ fetchSalesReport()
 })
     .catch((error) => {
     console.error("Sale report error", error);
+})
+    .finally(() => {
+    console.log("All Api calls have been attempted");
 });
+import * as API from './apiiSimulatorr';
 //# sourceMappingURL=index.js.map

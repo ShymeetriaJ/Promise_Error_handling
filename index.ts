@@ -1,5 +1,6 @@
 import { fetchProductCatalog, fetchProductReviews, fetchSalesReport } from "./apiiSimulatorr";
 
+
 fetchProductCatalog()
 .then((ProductCatalog) => {
     console.log(ProductCatalog)
@@ -21,5 +22,12 @@ fetchSalesReport()
 .catch((error) => {
     console.error("Sale report error", error);
 
+})
+.finally(() => {
+    console.log("All Api calls have been attempted");
 });
+import * as API from './apiiSimulatorr';
+
+
+
 

@@ -1,3 +1,4 @@
+import { NetworkError, DataError } from "./customErrors";
 export const fetchProductCatalog = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -8,7 +9,7 @@ export const fetchProductCatalog = () => {
                 ]);
             }
             else {
-                reject("Failed to fetch product catalog");
+                reject(("Failed to fetch product catalog"));
             }
         }, 1000);
     });

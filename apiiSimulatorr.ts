@@ -1,4 +1,4 @@
-
+import { NetworkError, DataError } from "./customErrors";
 
 export const fetchProductCatalog = (): Promise<{ id: number; name: string; price: number }[]> => {
     return new Promise((resolve, reject) => {
@@ -9,7 +9,8 @@ export const fetchProductCatalog = (): Promise<{ id: number; name: string; price
             { id: 2, name: "Headphones", price: 200 },
         ]);
         } else {
-        reject("Failed to fetch product catalog");
+        reject(("Failed to fetch product catalog"));
+        
         }
     }, 1000);
     });
